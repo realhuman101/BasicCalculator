@@ -80,7 +80,7 @@ float operate(vector<string> equation) {
 
 int main() {
 	string input;
-	cout << "Enter equation: ";
+	cout << "Enter equation: (All numbers and operators MUST be seperated by spaces) ";
     getline(cin, input);
 
 	cout << input << " = " << operate(split(input + " ")) << endl;
