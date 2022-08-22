@@ -32,10 +32,10 @@ vector<string> split(string str, char delim = ' ') {
 	return splitted;
 }
 
-int calculate(string symbol, int value1, int value2) {
+float calculate(string symbol, float value1, float value2) {
     // Does math with numbers
     
-    int result;
+    float result;
     if (symbol == "+") {
 		result = value1 + value2;
 	}
@@ -65,13 +65,13 @@ int strDigits (string str) {
 	return count;
 }
 
-int operate(vector<string> equation) {
+float operate(vector<string> equation) {
 	// Calculate the math
 
-	int current = stoi(equation[0]);
+	float current = stof(equation[0]);
 
     for (int i = 2; i <= equation.size(); i += 2) {
-		current = calculate(equation[i-1], current, stoi(equation[i]));
+		current = calculate(equation[i-1], current, stof(equation[i]));
 	}
 
 	return current;
